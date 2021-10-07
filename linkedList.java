@@ -58,7 +58,7 @@ public class linkedList {
 			addLast(input);
 		}
 		else if(index>size) {
-			System.out.println("index가 size보다 큽니다. add("+index+","+size+") 실행불가");
+			return -1;
 		}
 		else {
 			Node newNode = new Node(input);
@@ -71,7 +71,7 @@ public class linkedList {
 			
 	}
 	
-	public Object removeFirst() { 									//remove 값 반환
+	public Object removeFirst() { 									
 		Node temp = head;
 		head = head.next;
 		Object returnData = temp.data;
@@ -117,19 +117,6 @@ public class linkedList {
 	public Object get(int index) {
 		return node(index).data;
 	}
-	/*
-	public void search(Object input) {					//전체탐색 && return안하고 바로 출력
-		Node temp = head;
-		System.out.print("데이터가 "+input+"인 노드는 ");
-		for(int i=0; i<size; i++) {
-			if(temp.data==input) {
-				System.out.print(i+" ");
-			}
-			temp=temp.next;
-		}
-		System.out.println("번째 노드입니다.");
-	}
-	*/
 	
 	public int indexOf(Object data) {
 		Node temp = head;
