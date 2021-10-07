@@ -9,9 +9,10 @@ public class Main {
 		numbers.add(1, 2);
 		numbers.add(1, 1);
 		numbers.addLast(5);
-		numbers.removeLast();
-		numbers.removeLast();
 		System.out.println(numbers);
+		
+		numbers.remove(4);
+		numbers.removeLast();
 		
 		linkedList.ListIterator i  = numbers.listIterator();
 		System.out.println(i.next());
@@ -24,3 +25,12 @@ public class Main {
 	
 }
 
+/*output
+[ 0 1 2 3 4 5 ]
+0
+1
+2
+3
+-1
+false
+*/
